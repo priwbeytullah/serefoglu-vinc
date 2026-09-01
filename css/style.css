@@ -948,6 +948,8 @@ img {
 /* ==========================================================================
    Responsive
    ========================================================================== */
+
+/* Tablet */
 @media (max-width: 992px) {
     .about-grid, .footer-grid {
         grid-template-columns: 1fr;
@@ -958,38 +960,75 @@ img {
     }
     
     .experience-badge {
-        width: 120px;
-        height: 120px;
-        right: 0;
+        width: 110px;
+        height: 110px;
+        right: 10px;
+        bottom: -20px;
     }
     
     .experience-badge .number {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .experience-badge .text {
+        font-size: 0.8rem;
     }
     
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
     }
     
     .page-header {
-        padding: 120px 0 60px;
+        padding: 120px 0 50px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .mobile-toggle {
         display: block;
     }
     
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 65px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 65px);
         background-color: var(--bg-light);
         transition: 0.4s ease;
-        padding: 40px 20px;
+        padding: 30px 20px;
         border-top: 1px solid var(--border-color);
         box-shadow: var(--shadow-md);
     }
@@ -1001,22 +1040,391 @@ img {
     .nav-menu ul {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 15px;
     }
-    
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    .header.scrolled .logo img {
+        height: 32px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .header.scrolled {
+        padding: 8px 0;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 500px;
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
     }
-    
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+
     .hero-buttons {
         flex-direction: column;
+        gap: 12px;
     }
-    
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 0.85rem;
+    }
+
+    /* Sections */
     .section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
-    
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header .subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-header p {
+        font-size: 0.9rem;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: 100px 0 40px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+
+    /* About */
+    .about-grid {
+        gap: 30px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .mission-quote {
+        padding: 20px;
+    }
+
+    .mission-quote p {
+        font-size: 0.9rem;
+    }
+
+    .experience-badge {
+        width: 90px;
+        height: 90px;
+        right: 5px;
+        bottom: -15px;
+        border-width: 5px;
+    }
+
+    .experience-badge .number {
+        font-size: 1.5rem;
+    }
+
+    .experience-badge .text {
+        font-size: 0.65rem;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .feature-card {
+        padding: 25px 15px;
+    }
+
+    .feature-card .icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .feature-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .feature-card p {
+        font-size: 0.8rem;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-img {
+        height: 180px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+
+    .service-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+
+    .service-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .gallery-item {
+        height: 150px;
+        border-radius: 6px;
+    }
+
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .blog-img {
+        height: 170px;
+    }
+
+    .blog-content {
+        padding: 18px;
+    }
+
+    .blog-meta {
+        font-size: 0.75rem;
+    }
+
+    .blog-title {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .blog-excerpt {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        -webkit-line-clamp: 2;
+    }
+
+    .read-more {
+        font-size: 0.85rem;
+    }
+
+    /* Blog Detail */
+    .blog-detail-body p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .blog-detail-body img {
+        margin: 20px 0;
+    }
+
+    /* Footer */
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer-grid {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-logo img {
+        height: 40px;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+        margin: 15px 0 20px;
+    }
+
+    .contact-details {
+        gap: 18px;
+    }
+
+    .contact-item {
+        gap: 12px;
+    }
+
+    .contact-item i {
+        font-size: 1.2rem;
+    }
+
+    .contact-item h4 {
+        font-size: 0.9rem;
+    }
+
+    .contact-item p, .contact-item a {
+        font-size: 0.85rem;
+    }
+
+    .phones {
+        gap: 6px;
+    }
+
     .footer-map iframe {
-        height: 300px;
+        height: 250px;
+    }
+
+    .footer-bottom {
+        padding: 15px 0;
+        font-size: 0.75rem;
+    }
+
+    /* WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header {
+        padding: 90px 0 30px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .feature-card {
+        padding: 20px 12px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+    }
+
+    .feature-card .icon-box {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .feature-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .feature-card p {
+        font-size: 0.75rem;
+        display: none;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .gallery-item {
+        height: 120px;
+    }
+
+    .service-img {
+        height: 150px;
+    }
+
+    .blog-img {
+        height: 140px;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+    }
+
+    .experience-badge {
+        width: 75px;
+        height: 75px;
+        border-width: 4px;
+    }
+
+    .experience-badge .number {
+        font-size: 1.2rem;
+    }
+
+    .experience-badge .text {
+        font-size: 0.55rem;
+    }
+
+    .contact-item p, .contact-item a {
+        font-size: 0.8rem;
+    }
+
+    .footer-map iframe {
+        height: 200px;
     }
 }
