@@ -273,8 +273,7 @@ img {
    ========================================================================== */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    padding: 200px 0 140px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -314,7 +313,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.6) 100%);
     z-index: 2;
 }
 
@@ -1074,7 +1073,7 @@ img {
 
     /* Hero */
     .hero {
-        min-height: 500px;
+        padding: 140px 0 80px;
     }
 
     .hero h1 {
